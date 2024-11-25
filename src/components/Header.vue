@@ -1,20 +1,17 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-success navbar-dark">
     <div class="container">
-      <!-- Logo o Nombre -->
-      <a class="navbar-brand" href="/">Mi Portafolio</a>
+      <router-link class="navbar-brand" to="/">Mi Portafolio</router-link>
       
-      <!-- Botón hamburguesa para móvil -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       
-      <!-- Menú de navegación -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <router-link class="nav-link" to="/">Inicio</router-link>
+            <router-link class="nav-link" to="/home">Inicio</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/about">Sobre Mí</router-link>
@@ -47,22 +44,26 @@ export default {
   text-decoration: underline;
 }
 
-/* Si deseas personalizar el tono de verde */
-.bg-success {
-  background-color: #42b983 !important; /* Mantiene tu color verde original */
-}
-
-/* Ajustes adicionales para mejorar la apariencia */
 .nav-link {
+  color: white !important;
   padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
+  opacity: 0.8;
 }
 
-/* Ajustes para dispositivos móviles */
+.router-link-active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: bold;
+}
+
 @media (max-width: 991.98px) {
   .navbar-nav {
     padding: 1rem 0;

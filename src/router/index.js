@@ -8,6 +8,10 @@ import Contact from '../components/ContactForm.vue'
 const routes = [
   {
     path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     name: 'Home',
     component: Home
   },

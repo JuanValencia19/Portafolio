@@ -66,7 +66,7 @@
               class="btn btn-primary btn-lg px-5"
               :disabled="isSubmitting"
             >
-              {{ isSubmitting ? 'Enviando...' : 'Enviar Mnesaje' }}
+              {{ isSubmitting ? 'Enviando...' : 'Enviar Mensaje' }}
             </button>
           </form>
         </div>
