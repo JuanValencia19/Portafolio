@@ -4,11 +4,5 @@ module.exports = defineConfig({
   publicPath: process.env.NODE_ENV === 'production'
     ? '/Portafolio/'
     : '/',
-  configureWebpack: {
-    resolve: {
-      fallback: {
-        "path": false
-      }
-    }
-  }
+  outputDir: 'dist'
 })
