@@ -77,7 +77,8 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
-import { useToast } from 'vue-toastification' // Asegúrate de instalar este paquete
+import { useToast } from 'vue-toastification'
+import emailjs from '@emailjs/browser'
 
 // Estado del formulario
 const formData = reactive({
@@ -103,20 +104,20 @@ const validateForm = () => {
   errors.message = ''
 
   if (!formData.name.trim()) {
-    errors.name = 'Name is required'
+    errors.name = 'El nombre es requerido'
     isValid = false
   }
 
   if (!formData.email.trim()) {
-    errors.email = 'Email is required'
+    errors.email = 'El email es requerido'
     isValid = false
   } else if (!validateEmail(formData.email)) {
-    errors.email = 'Please enter a valid email'
+    errors.email = 'Por favor ingresa un email válido'
     isValid = false
   }
 
   if (!formData.message.trim()) {
-    errors.message = 'Message is required'
+    errors.message = 'El mensaje es requerido'
     isValid = false
   }
 
@@ -135,21 +136,23 @@ const handleSubmit = async () => {
   try {
     isSubmitting.value = true
     
-    // Aquí iría tu lógica de envío a una API
-    await new Promise(resolve => setTimeout(resolve, 1000)) // Simulación de envío
-    
-    // Ejemplo de envío a una API:
-    // const response = await fetch('tu-api-endpoint', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(formData)
-    // })
-    
-    // if (!response.ok) throw new Error('Failed to send message')
+    // Configuración de EmailJS
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_name: 'Juan Jose Valencia', // Tu nombre
+      reply_to: formData.email
+    }
 
-    toast.success('Message sent successfully!')
+    await emailjs.send(
+      'service_dnfdcg9',
+      'template_vac5gwt',
+      templateParams,
+      'm2aIH9pUMDWzvc1w9'
+    )
+    
+    toast.success('¡Mensaje enviado exitosamente!')
     
     // Limpiar el formulario
     formData.name = ''
@@ -157,8 +160,8 @@ const handleSubmit = async () => {
     formData.message = ''
     
   } catch (error) {
-    console.error('Error sending message:', error)
-    toast.error('Failed to send message. Please try again.')
+    console.error('Error al enviar mensaje:', error)
+    toast.error('Error al enviar el mensaje. Por favor intenta nuevamente.')
   } finally {
     isSubmitting.value = false
   }
