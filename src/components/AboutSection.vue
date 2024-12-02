@@ -7,13 +7,16 @@
           
           <div class="about-content pe-lg-4">
             <p class="lead mb-4">
-              Soy un desarrollador web apasionado por crear soluciones digitales innovadoras. 
-              Me especializo en el desarrollo front-end y diseño UX/UI. 
-              Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades en 
-              programación creativa.
+              Soy un desarrollador jr comprometido con la creación de soluciones digitales completas e innovadoras, combinando diseño atractivo con funcionalidades robustas y eficientes. Mi pasión por el desarrollo me lleva a especializarme tanto en el frontend, diseñando interfaces intuitivas y centradas en el usuario, como en el backend, asegurando que las aplicaciones sean escalables y de alto rendimiento.
+
+Trabajo con tecnologías como Vue.js, JavaScript, MongoDB y Git, lo que me permite abordar proyectos con una perspectiva integral, desde la experiencia del usuario hasta la lógica del sistema. Además, estoy en constante aprendizaje, explorando nuevas herramientas y frameworks que me permitan mantenerme actualizado en este campo en constante evolución.
+
+Mi objetivo es contribuir a proyectos que no solo cumplan con los requerimientos técnicos, sino que también generen un impacto positivo en los usuarios y las empresas. Estoy siempre listo para enfrentar nuevos retos y colaborar con equipos multidisciplinarios para crear soluciones modernas y funcionales.
             </p>
             
-            <a href="#" class="btn btn-outline-light btn-lg mt-3">
+            <a href="/Curriculum.pdf" 
+               download="JuanJoseValencia_CV.pdf"
+               class="btn btn-outline-light btn-lg mt-3">
               <i class="fas fa-download me-2"></i> 
               Curriculum
             </a>
