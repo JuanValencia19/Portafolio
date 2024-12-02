@@ -10,7 +10,7 @@
         <div class="col-12 col-md-4">
           <div class="skill-card p-4 bg-white rounded-4 text-center h-100">
             <div class="icon-circle mb-4 mx-auto">
-              <i class="fas fa-layer-group"></i>
+              <i class="fas fa-briefcase"></i>
             </div>
             <h3 class="fw-bold mb-3">Experiencias</h3>
             <p class="text-muted mb-4">
@@ -18,7 +18,7 @@
             </p>
 
             <h5 class="text-purple mb-3">Temas en los que he trabajado:</h5>
-            <p class="text-muted mb-4">UX, UI, Web, Bases de datos, Javascript</p>
+            <p class="text-muted mb-4">Diseño arquitectonico de software, UI, Web, Bases de datos, Sistema de Gestion de Cine</p>
 
             <h5 class="text-purple mb-3">Lugares en los que he trabajado:</h5>
             <ul class="list-unstyled">
@@ -33,7 +33,7 @@
         <div class="col-12 col-md-4">
           <div class="skill-card p-4 bg-white rounded-4 text-center h-100">
             <div class="icon-circle mb-4 mx-auto">
-              <i class="fas fa-code"></i>
+              <i class="fas fa-laptop-code"></i>
             </div>
             <h3 class="fw-bold mb-3">Developer</h3>
             <p class="text-muted mb-4">
@@ -53,11 +53,11 @@
           </div>
         </div>
 
-        <!-- Mentor Card -->
+        <!-- Hobbies Card -->
         <div class="col-12 col-md-4">
           <div class="skill-card p-4 bg-white rounded-4 text-center h-100">
             <div class="icon-circle mb-4 mx-auto">
-              <i class="fas fa-book-reader"></i>
+              <i class="fas fa-gamepad"></i>
             </div>
             <h3 class="fw-bold mb-3">Hobbies</h3>
             <p class="text-muted mb-4">

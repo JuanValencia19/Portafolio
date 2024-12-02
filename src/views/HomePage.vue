@@ -17,14 +17,17 @@
             </p>
             <!-- Botones de acción -->
             <div class="d-flex flex-wrap gap-3 animate__animated animate__fadeIn animate__delay-2s">
-              <a 
-                v-for="button in actionButtons" 
-                :key="button.text"
-                :href="button.href"
-                :class="button.class"
-              >
-                {{ button.text }}
-              </a>
+              <button 
+                @click="$router.push({ name: 'Projects' })"
+                class="btn btn-primary btn-lg">
+                Ver Proyectos
+              </button>
+
+              <button 
+                @click="$router.push({ name: 'Contact' })"
+                class="btn btn-outline-light btn-lg">
+                Contactar
+              </button>
             </div>
           </div>
         </div>
@@ -44,29 +47,14 @@
 
 <script setup>
 import { ref } from 'vue'
-
-
 // Datos reactivos
 const title = ref('Bienvenido.')
-const description = ref('Soy Juan Jose Valencia, desarrollador web jr con pasión por crear interfaces agradables y funcionales. Me especializo en el desarrollo de aplicaciones web modernas y experiencias de usuario intuitivas.')
+const description = ref('Hola, soy Juan José Valencia, desarrollador web jr apasionado por crear y aportar a soluciones completas que combinan interfaces atractivas con funcionalidades robustas. Disfruto trabajando en el desarrollo de aplicaciones modernas, tanto en el frontend para ofrecer experiencias de usuario intuitivas, como en el backend para asegurar sistemas eficientes y escalables.')
 
 // Importar imagen
 const logoUrl = new URL('../assets/images/3929637.jpg', import.meta.url).href
 const imageAlt = ref('Laptop coding illustration')
 
-// Botones de acción
-const actionButtons = ref([
-  {
-    text: 'Ver Proyectos',
-    href: '/projects',
-    class: 'btn btn-primary btn-lg'
-  },
-  {
-    text: 'Contactar',
-    href: '/contact',
-    class: 'btn btn-outline-light btn-lg'
-  }
-])
 </script>
 
 <style scoped>
@@ -210,5 +198,9 @@ h1 {
     padding: 0.6rem 1.5rem;
     font-size: 1rem;
   }
+}
+
+.btn-primary, .btn-outline-light {
+  z-index: 10; /* Asegúrate de que los botones estén en la parte superior */
 }
 </style>
