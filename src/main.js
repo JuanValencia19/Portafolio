@@ -9,4 +9,4 @@ const app = createApp(App)
 app.use(router)
 app.mount('#app')
 
-emailjs.init("TU_PUBLIC_KEY")
+emailjs.init("m2aIH9pUMDWzvc1w9")

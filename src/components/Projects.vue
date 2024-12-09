@@ -6,13 +6,13 @@
         <!-- Proyecto 1 -->
         <div class="col-md-6 col-lg-4">
           <div class="project-card h-100" @mouseover="addShadow" @mouseout="removeShadow">
-            <img src="../assets/logo.png" class="card-img-top" alt="Proyecto 1">
+            <img src="../assets/images/image.png" class="card-img-top" alt="Proyecto 1">
             <div class="card-body">
-              <h3 class="card-title text-light">Sistema de Gestión</h3>
-              <p class="card-text">Aplicación web para gestionar inventarios y ventas con Laravel y Vue.js</p>
+              <h3 class="card-title text-light">Sistema de Gestión para Cine</h3>
+              <p class="card-text">Aplicación web para gestionar las ventas, asientos y facturacion de un cine con MongoDB, TMDB API y Vue.js</p>
               <div class="project-links">
                 <a href="#" class="btn btn-success me-2" target="_blank">Visitar</a>
-                <a href="#" class="btn btn-outline-light" target="_blank">Github</a>
+                <a href="https://github.com/santiagorf23/ProyectoDB2" class="btn btn-outline-light" target="_blank">Github</a>
               </div>
             </div>
           </div>
